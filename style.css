@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+.foldedInfo{
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+  /* width:100px;
+  height:100px; */
+  /* background:red; */
+  /* transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out; */
+  /* position:absolute; */
+
+}
+/* .foldedInfo.slideRight{
+     -webkit-animation: slide 0.5s forwards;
+     -webkit-animation-delay: 2s;
+     animation: slide 0.5s forwards;
+     animation-delay: 2s;
+} */
+@-webkit-keyframes slide {
+    100% { left: 37%; }
+}
+
+@keyframes slide {
+    100% { left: 37%; }
+}
+
+
+/* #foldedInfo:hover
+{
+  transform: translate(100px,0);
+  -webkit-transform: translate(100px,0);
+  -moz-transform: translate(100px,0);
+  -o-transform: translate(100px,0);
+  -ms-transform: translate(100px,0);
+} */
+#story{
+  position: absolute;
+  left: 0.5%;
+  top:0.8%;
+}
+#sliderBtn{
+    /* background-image: url('images/arrow.png'); */
+    background-color: Transparent;
+    cursor:pointer;
+    border: none;
+    width: 148.4px;
+    height: 140px;
+    position: absolute;
+
+    z-index:3;
+    left:47%;
+    top:26%;
+    opacity: 0.6;
+
+}
+
+#sliderBtn:hover {opacity: 1}
+#sliderBtn:focus {outline:0;}
+
+#detailedPage{
+  /* transition: background-image 1s ease-in-out; */
+  position: absolute;
+  left:0.5%;
+  top:0.5%;
+  width: 39%;
+  height: auto;
+  z-index:4;
+
+}
+
+#storyCard{
+  /* display:none; */
+  position: relative;
+
+  /* left:36%; */
+  /* top:0.5%; */
+  width: 50%;
+  height:auto;
+  z-index:2;
+}
+
+#logo{
+  position: fixed;
+  right:2.5%;
+  top:4%;
+  height:5%;
+  width:auto;
+
+  z-index: 5;
+}
