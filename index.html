@@ -7,13 +7,26 @@
   <body style="background-color:black">
     <script src="sketch.js"></script>
     <script src="Marker.js"></script>
+    <script>
+
+      // document.getElementById('sliderBtn').onclick = function(){
+      //   document.getElementById("story").classList.add("foldedInfo");
+      //
+      // }
+      function sliderBtn() {
+          document.getElementById("story").classList.add("foldedInfo");
+      }
+      </script>
+
     <div id="sketch-div">
   <!-- //<canvas id="bg" width="640" height="480" style="position: absolute; z-index: 1"> -->
       <!-- <button class="sliderBtn" onclick="sliderBtn()" ><img height="100%" src="images/arrow.png" ></button> -->
 
       <img id="detailedPage" src="images/01.png">
+
+      
       <!-- <div class="foldedInfo"> -->
-            <div id="story">
+      <div id="story">
         <button id="sliderBtn" onclick="sliderBtn()" ><img height="100%" src="images/arrow.png" ></button>
         <img id="storyCard" src="images/story.png">
       </div>
@@ -21,14 +34,5 @@
       <img id="logo" src="images/logo.png">
 </div>
 
-    <script>
 
-    // document.getElementById('sliderBtn').onclick = function(){
-    //   document.getElementById("story").classList.add("foldedInfo");
-    //
-    // }
-    function sliderBtn() {
-document.getElementById("story").classList.add("foldedInfo");
-    }
-    </script>
 </body></html>

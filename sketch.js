@@ -127,3 +127,5 @@ function printGood(){
 
   // document.getElementById("storyCard").style.display = "block";
 }
+
+

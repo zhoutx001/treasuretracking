@@ -8,9 +8,9 @@ canvas {
 
 .foldedInfo{
   -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 0s;
   animation: slide 0.5s forwards;
-  animation-delay: 2s;
+  animation-delay: 0s;
   /* width:100px;
   height:100px; */
   /* background:red; */
@@ -78,6 +78,11 @@ canvas {
   height: auto;
   z-index:4;
 
+  /* transition: all 1s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;  */
 }
 
 #storyCard{

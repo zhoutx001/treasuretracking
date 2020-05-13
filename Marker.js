@@ -31,6 +31,17 @@ class Marker {
   // image(this.img, 100- width / 2, 100- height / 2,100,100);
   // document.getElementById("detailedPage").src = "images/"+01+".png";
   document.getElementById("detailedPage").src = "images/detailedPages/"+this.itemIndex.toString()+".png";
+
+//   $("#vehicle").change(function(){
+//     var selected = $(this).val();
+//     var image = $("#detailedPage");
+//     image.fadeOut('fast', function () {
+//         image.attr('src', '/images/detailedPages/'+selected+'.png');
+//         image.fadeIn('fast');
+//     });
+// });
+
+
   // print(toString(this.itemIndex))
   //print(this.itemIndex)
   }
@@ -92,6 +103,7 @@ class Marker {
   //     }
   //
   // }
+  
   onHover(){
     if(!isNaN(this.x)&&!isNaN(this.y)){
       if (dist(this.x, this.y, (mouseX - (width / 2.1)), (mouseY - (height / 1.4))) >= 7)
