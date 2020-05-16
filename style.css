@@ -6,45 +6,49 @@ canvas {
   display: block;
 }
 
+@font-face {
+  font-family: ivyJournalSemiBold;
+  src: url(fonts/37999.otf);
+}
+
+@font-face {
+  font-family: ivyJournalRegular;
+  src: url(fonts/38005.otf);
+}
+
+@font-face {
+  font-family: ivyJournalBold;
+  src: url(fonts/38006.otf);
+}
+
 .foldedInfo{
-  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation: slidein 0.5s forwards;
   -webkit-animation-delay: 0s;
-  animation: slide 0.5s forwards;
+  animation: slidein 0.5s forwards;
   animation-delay: 0s;
-  /* width:100px;
-  height:100px; */
-  /* background:red; */
-  /* transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out; */
-  /* position:absolute; */
-
 }
-/* .foldedInfo.slideRight{
-     -webkit-animation: slide 0.5s forwards;
-     -webkit-animation-delay: 2s;
-     animation: slide 0.5s forwards;
-     animation-delay: 2s;
-} */
-@-webkit-keyframes slide {
+@-webkit-keyframes slidein {
+    100% { left: 37%; }
+}
+@keyframes slidein {
     100% { left: 37%; }
 }
 
-@keyframes slide {
-    100% { left: 37%; }
+.foldedInfoBack{
+  -webkit-animation: slideback 0.5s forwards;
+  -webkit-animation-delay: 0s;
+  animation: slideback 0.5s forwards;
+  animation-delay: 0s;
 }
 
+@-webkit-keyframes slideback {
+    100% { left: 0%; }
+}
 
-/* #foldedInfo:hover
-{
-  transform: translate(100px,0);
-  -webkit-transform: translate(100px,0);
-  -moz-transform: translate(100px,0);
-  -o-transform: translate(100px,0);
-  -ms-transform: translate(100px,0);
-} */
+@keyframes slideback {
+    100% { left: 0%; }
+}
+
 #story{
   position: absolute;
   left: 0.5%;
@@ -63,26 +67,75 @@ canvas {
     left:47%;
     top:26%;
     opacity: 0.6;
-
 }
 
 #sliderBtn:hover {opacity: 1}
 #sliderBtn:focus {outline:0;}
 
+.detailPage{
+  background-color:rgba(22, 25, 28, 0.85);
+  border-radius: 5px;
+
+  width: 30%;
+  height: auto;
+
+  padding: 2.86%;
+  position: absolute;
+  left: 2.86%;
+  top: 2.86%;
+  z-index: 6;
+}
+
+.detailPage h1{
+  color:rgba(255, 255, 255, 0.85);
+  font-size: 26px;
+  font-family:ivyJournalBold;
+}
+.detailPage h2{
+  color:rgba(255, 255, 255, 0.85);
+  margin-top: 60px;
+  font-size: 16px;
+  font-family:ivyJournalBold;
+}
+.detailPage img{
+  margin: 10px 0px;
+  width: 100%;
+  height: auto;
+}
+.detailPage .notations{
+  margin-bottom: -4px;
+  width: 100%;
+  height: auto;
+}
+.detailPage p{
+  color:rgba(255, 255, 255, 0.5);
+  font-family: ivyJournalRegular;
+}
+.detailPage .pReferences{
+  color:rgba(255, 255, 255, 0.5);
+  font-family: ivyJournalRegular;
+ 
+  word-wrap: break-word;
+  width: 100%;
+
+}
+.detailPage hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 40px 0;
+}
+
 #detailedPage{
   /* transition: background-image 1s ease-in-out; */
   position: absolute;
-  left:0.5%;
-  top:0.5%;
+  left:1.2%;
+  top:0.9%;
   width: 39%;
   height: auto;
   z-index:4;
-
-  /* transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;  */
+  opacity: 0;
 }
 
 #storyCard{
@@ -94,6 +147,7 @@ canvas {
   width: 50%;
   height:auto;
   z-index:2;
+  opacity: 0;
 }
 
 #logo{

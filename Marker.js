@@ -32,18 +32,6 @@ class Marker {
   // document.getElementById("detailedPage").src = "images/"+01+".png";
   document.getElementById("detailedPage").src = "images/detailedPages/"+this.itemIndex.toString()+".png";
 
-//   $("#vehicle").change(function(){
-//     var selected = $(this).val();
-//     var image = $("#detailedPage");
-//     image.fadeOut('fast', function () {
-//         image.attr('src', '/images/detailedPages/'+selected+'.png');
-//         image.fadeIn('fast');
-//     });
-// });
-
-
-  // print(toString(this.itemIndex))
-  //print(this.itemIndex)
   }
 
   findSpeed() {
@@ -63,8 +51,6 @@ class Marker {
 
       if (this.ind < this.pathLen - 2) {
         this.ind++;
-
-
       } else if (this.ind == this.pathLen - 2) {
         this.ind = 0;
         this.currentR = this.R;
