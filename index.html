@@ -1,26 +1,136 @@
 <!DOCTYPE html><html lang="en"><head>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
+    <script>
+function provideClue(){
+  window.open('mailto:tz1440@nyu.edu');
+}
+      // // document.getElementById('sliderBtn').onclick = function(){
+      // //   document.getElementById("story").classList.add("foldedInfo");
+      // //
+      // // }
+      // function sliderBtn() {
+      //   if(document.getElementById("story").className == "foldedInfoBack")
+      //     document.getElementById("story").className = "foldedInfo";
+      //   else
+      //     document.getElementById("story").className = "foldedInfoBack";
+      //   // document.getElementById("story").classList.toggle("foldedInfoBack");
+      //   //   document.getElementById("story").classList.toggle("foldedInfo");
+          
+      // }
+      // $(document).ready(function(){
+  //     $("#sliderBtn").click(function(){
+  // $(".story").animate({left: '500px'});
+
+//   $(document).ready(function(){
+//     $("#sliderBtn").click(function(){
+//       $("#story").animate({
+//           marginLeft: "37%"
+//         });
+
+
+//         // print("okkk");
+//     });
+// });
+
+
+// $(document).ready(function(){
+//     $("#sliderBtn").click(function(){
+//         $("#storyCard").animate({
+//           marginLeft: "37%"
+//         });
+//     });
+// });
+
+//   $(document).ready(function(){
+//     $("#sliderBtn").click(function(){
+//       $("#story").animate({
+//           marginLeft: "37%"
+//         });
+
+
+//         // print("okkk");
+//     });
+// });
+
+// $(document).ready(function(){
+//     $("#sliderBtn").toggle(
+//       function(){
+//         $("#story").animate({
+//           marginLeft: "37%"
+//         })
+//       },
+//       function(){
+//         $("#story").animate({
+//           marginLeft: "5%"
+//         })
+//     });
+// });
+
+// $(document).ready(function(){
+//   $("#sliderBtn").click(function(){
+//     $("#storyCard").toggle('slide', { direction: 'left' }, 0);
+//   });
+// });
+
+
+
+
+// $(document).ready(function(){
+//   $("#sliderBtn").click(function(){
+//     var toggleWidth = $("#storyCard").width() == "0%" ? "30%" : "0%";
+//     var toggleHeight = $("#storyCard").height() == "0%" ? "30%" : "0%";
+//     // var toggleLeft= $("#storyCard").left() == 0 ? "39%" : "0";
+//     // var toggleOpacity= $("#storyCard").opacity() == 0 ? "1" : "0";
+//     $("#storyCard").animate({width: toggleWidth,opacity: "toggle",left:"toggle"});
+// });
+// });
+
+var showStory = false;
+$(document).ready(function(){
+  $("#sliderBtn").click(function() {
+    if(!showStory){
+        $('#storyCard').animate({width: '30%',height: 'auto',marginLeft:"37%",opacity:"1"},"slow");
+        $('#sliderBtn').animate({marginLeft: "74%"},"slow");
+    } else {
+        $('#storyCard').animate({marginLeft:"15%",opacity:"0"},450);
+        $('#sliderBtn').animate({marginLeft: "37.9%"},"slow");
+    }
+    showStory = !showStory;
+});
+});
+
+// $(document).ready(function(){
+//   $("#sliderBtn").click(function(){
+//     $("#story").toggle(
+//       function(){
+//         $("#story").animate({
+//           marginLeft: "37%"
+//       })
+//     });
+//   });
+// });
+
+
+
+
+      </script>
   </head>
   <body style="background-color:black">
     <script src="sketch.js"></script>
     <script src="Marker.js"></script>
-    <script>
+   
 
-      // document.getElementById('sliderBtn').onclick = function(){
-      //   document.getElementById("story").classList.add("foldedInfo");
-      //
-      // }
-      function sliderBtn() {
-          document.getElementById("story").classList.add("foldedInfo");
-      }
-      </script>
+
+
 
     <div id="sketch-div">
-  <!-- //<canvas id="bg" width="640" height="480" style="position: absolute; z-index: 1"> -->
-      <!-- <button class="sliderBtn" onclick="sliderBtn()" ><img height="100%" src="images/arrow.png" ></button> -->
+      
       <div class="detailPage"> 
         <h1>Qianlong's Dish</h1>  
         <h2>Path of Trading</h2>  
@@ -34,15 +144,24 @@
         <p class="pReferences">https://studio.mapbox.com/styles/sirhcnep/cka09v2ju0y0y1inqhdx8j3jq/edit/#0.73/35.6/43.4</p>
       </div>
         
-      <img id="detailedPage" src="images/01.png">
-        <!-- <div class="foldedInfo"> -->
-      <div id="story">
-        <button id="sliderBtn" onclick="sliderBtn()" ><img height="100%" src="images/arrow.png" ></button>
-        <img id="storyCard" src="images/story.png">
-      </div>
-  <!-- </canvas> -->
-        <img id="logo" src="images/logo.png">
+      <!-- <img id="detailedPage" src="images/01.png"> -->
+      
+
+        <div id="story">
+            <div class="detailPage" id="storyCard"> 
+              <p>Come and join us on tracing the lost cultural treasures! It’s our great honor to have you contribute to the trade path. We’re welcomed to all sorts of clues, interesting stories, or any other related information. Feel free to lick the button below to share your thoughts!</p>     
+              <button id="provideClue" onclick="provideClue()"><img src="images/story/clue.png" ></button>
+            </div>
+         
+          <div><button id="sliderBtn"><img width="100%" height="auto" src="images/arrow.png" ></button></div>
+        </div>
+      
+      <img id="logo" src="images/logo.png">
+
+      
     </div>
+
+    
 
 
 </body></html>

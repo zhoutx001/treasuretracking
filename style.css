@@ -20,6 +20,11 @@ canvas {
   font-family: ivyJournalBold;
   src: url(fonts/38006.otf);
 }
+#story{
+  opacity: 1;
+  /* width:30% ; */
+  /* position: relative; */
+}
 
 .foldedInfo{
   -webkit-animation: slidein 0.5s forwards;
@@ -48,25 +53,40 @@ canvas {
 @keyframes slideback {
     100% { left: 0%; }
 }
+#provideClue{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
-#story{
-  position: absolute;
-  left: 0.5%;
-  top:0.8%;
+  background-color: Transparent;
+  cursor:pointer;
+  border: none;
+  width: 150px;
+  height: auto;
+  opacity: 0.8;
 }
+#provideClue:hover {opacity: 1}
+#provideClue:focus {outline:0;}
+
 #sliderBtn{
     /* background-image: url('images/arrow.png'); */
     background-color: Transparent;
     cursor:pointer;
     border: none;
-    width: 148.4px;
-    height: 140px;
-    position: absolute;
 
-    z-index:3;
-    left:47%;
-    top:26%;
-    opacity: 0.6;
+    position: absolute;
+    margin-left: 37.9%;
+
+    width: 65px;
+    height: auto;
+
+    
+    z-index:5;
+    
+    top:18.5%;
+    opacity: 0.8;
+
+    /* transform: rotate(180deg); */
 }
 
 #sliderBtn:hover {opacity: 1}
@@ -127,26 +147,12 @@ canvas {
   margin: 40px 0;
 }
 
-#detailedPage{
-  /* transition: background-image 1s ease-in-out; */
-  position: absolute;
-  left:1.2%;
-  top:0.9%;
-  width: 39%;
-  height: auto;
-  z-index:4;
-  opacity: 0;
-}
-
 #storyCard{
-  /* display:none; */
-  position: relative;
-
-  /* left:36%; */
-  /* top:0.5%; */
-  width: 50%;
-  height:auto;
-  z-index:2;
+  /* display:inline-block; */
+  /* position: relative; */  
+  z-index:3;
+  /* width: 0%; */
+  /* left: 39%; */
   opacity: 0;
 }
 
