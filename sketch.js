@@ -17,7 +17,7 @@ let marker = []
 
 function preload() {
   mapimg = loadImage('https://api.mapbox.com/styles/v1/mapbox/dark-v8/static/0,0,1.4,0.00,0.00/1200x800?access_token=pk.eyJ1Ijoic2lyaGNuZXAiLCJhIjoiY2s5aG5nYTlxMTBqdTNlbm9ieHVrdjJtbSJ9.IeEpVj_sL-bWULPbttnwUw')
-  artworks = loadStrings('Data9.csv')
+  artworks = loadStrings('Data11.csv')
   map1 = loadImage('images/finalmap.png')
   // sliderBtnImg=loadImage()
 }
@@ -42,7 +42,7 @@ function mercY(lat) {
 function setup() {
   let canvas=createCanvas(1350, 880);
   canvas.parent('sketch-div');
-  canvas.position(400,0)
+  canvas.position(600,70)
   canvas.style('position: fixed')
   canvas.style('z-index:0')
 
@@ -71,7 +71,7 @@ function setup() {
     }
     //**********
     // marker.push(new Marker(locX[i - 1], locY[i - 1], random(0.5,1), 7,data[35],itemIndex));
-    marker.push(new Marker(locX[i - 1], locY[i - 1], random(0.5,1), 2,data[35],itemIndex));
+    marker.push(new Marker(locX[i - 1], locY[i - 1], random(0.5,1), 2,data[35],itemIndex,data[1],data[2],data[34]));
     //print(marker[i-1].itemIndex)
   }
 

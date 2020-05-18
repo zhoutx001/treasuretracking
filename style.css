@@ -124,8 +124,8 @@ canvas {
 }
 .detailPage .notations{
   margin-bottom: -4px;
-  width: 100%;
   height: auto;
+  width: 75%;
 }
 .detailPage p{
   color:rgba(255, 255, 255, 0.5);

@@ -1,9 +1,12 @@
 class Marker {
-  constructor(pathX, pathY, speed, r, documented,itemIndex) {
+  constructor(pathX, pathY, speed, r, documented,itemIndex,title,description,references) {
     this.startX = pathX[0];
     this.startY = pathY[0];
     this.endX = pathX[1];
     this.endY = pathY[1];
+    this.title=title;
+    this.description=description;
+    this.references=references;
 
     this.pathX = pathX;
     this.pathY = pathY;
@@ -30,7 +33,12 @@ class Marker {
   showImg(){
   // image(this.img, 100- width / 2, 100- height / 2,100,100);
   // document.getElementById("detailedPage").src = "images/"+01+".png";
-  document.getElementById("detailedPage").src = "images/detailedPages/"+this.itemIndex.toString()+".png";
+  document.getElementById("mapPic").src = "images/minimaps/"+this.itemIndex.toString()+".png";
+  document.getElementById("overviewPic").src = "images/overviewmap/"+this.itemIndex.toString()+".png";
+  document.getElementById("title").innerHTML = this.title.toString();
+  document.getElementById("overview").innerHTML = this.description.toString();
+  document.getElementById("references").innerHTML =  this.references.toString();
+
 
   }
 
