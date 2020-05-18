@@ -42,7 +42,7 @@ function mercY(lat) {
 function setup() {
   let canvas=createCanvas(1350, 880);
   canvas.parent('sketch-div');
-  canvas.position(600,70)
+  canvas.position(400,0)
   canvas.style('position: fixed')
   canvas.style('z-index:0')
 
